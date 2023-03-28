@@ -1,0 +1,484 @@
+2023-03-15 19:51:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANYID INTNAME[*] VARCHAR(255)"; SQL statement:
+CREATE TABLE COMPANYID INTNAME VARCHAR(255) [42000-200]
+2023-03-15 19:51:41 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANYID INTNAME[*] VARCHAR(255)"; SQL statement:
+CREATE TABLE COMPANYID INTNAME VARCHAR(255) [42000-200]
+2023-03-15 19:52:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANY,[*]ID INT,NAME VARCHAR(255)"; SQL statement:
+CREATE TABLE COMPANY,ID INT,NAME VARCHAR(255) [42000-200]
+2023-03-15 19:52:42 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANY,[*]ID INT,NAME VARCHAR(255)"; SQL statement:
+CREATE TABLE COMPANY,ID INT,NAME VARCHAR(255) [42000-200]
+2023-03-15 19:53:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANYID INT[*],NAME VARCHAR(255)"; SQL statement:
+CREATE TABLE COMPANYID INT,NAME VARCHAR(255) [42000-200]
+2023-03-15 19:53:29 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANYID INT[*],NAME VARCHAR(255)"; SQL statement:
+CREATE TABLE COMPANYID INT,NAME VARCHAR(255) [42000-200]
+2023-03-15 19:53:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY (ID INT,NAME VARCHAR(255)); [42101-200]
+2023-03-15 20:09:05 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.214/5]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.214/5]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.214/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1066)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:886)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	... 16 more
+2023-03-15 20:09:05 database: opening C:/Users/liavb/Documents/Car Sharing/Car Sharing/task/src/carsharing/db/carsharing
+org.h2.message.DbException: Unsupported database file version or invalid file header in file "C:/Users/liavb/Documents/Car Sharing/Car Sharing/task/src/carsharing/db/carsharing.mv.db" [90048-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:161)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/liavb/Documents/Car Sharing/Car Sharing/task/src/carsharing/db/carsharing.mv.db" [90048-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 17 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.214/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1066)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:886)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 14 more
+2023-03-16 13:20:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:22:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:22:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:22:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE company (ID INT AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:22:43 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE company (ID INT AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:24:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:24:08 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:29:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENTNAME[*] VARCHAR(255) NOT NULL UNIQUE);PRIMARY KEY(ID)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENTNAME VARCHAR(255) NOT NULL UNIQUE);PRIMARY KEY(ID) [42001-200]
+2023-03-16 13:29:21 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENTNAME[*] VARCHAR(255) NOT NULL UNIQUE);PRIMARY KEY(ID)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENTNAME VARCHAR(255) NOT NULL UNIQUE);PRIMARY KEY(ID) [42001-200]
+2023-03-16 13:37:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:37:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:43:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT[*] | PRIMARY KEYNAME VARCHAR(255) NOT NULL | UNIQUE);"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT | PRIMARY KEYNAME VARCHAR(255) NOT NULL | UNIQUE); [42000-200]
+2023-03-16 13:43:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT[*] | PRIMARY KEYNAME VARCHAR(255) NOT NULL | UNIQUE);"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENT | PRIMARY KEYNAME VARCHAR(255) NOT NULL | UNIQUE); [42000-200]
+2023-03-16 13:46:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENTNAME[*] VARCHAR(255) NOT NULL,PRIMARY KEY (ID),UNIQUE (NAME));"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENTNAME VARCHAR(255) NOT NULL,PRIMARY KEY (ID),UNIQUE (NAME)); [42001-200]
+2023-03-16 13:46:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENTNAME[*] VARCHAR(255) NOT NULL,PRIMARY KEY (ID),UNIQUE (NAME));"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INT AUTO_INCREMENTNAME VARCHAR(255) NOT NULL,PRIMARY KEY (ID),UNIQUE (NAME)); [42001-200]
+2023-03-16 13:47:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INTEGER AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INTEGER AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 13:47:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS COMPANY (ID INTEGER AUTO_INCREMENT PRIMARY KEYNAME[*] VARCHAR(255) NOT NULL UNIQUE);"; expected "KEY"; SQL statement:
+CREATE TABLE IF NOT EXISTS COMPANY (ID INTEGER AUTO_INCREMENT PRIMARY KEYNAME VARCHAR(255) NOT NULL UNIQUE); [42001-200]
+2023-03-16 14:15:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE
+IF NOT EXISTS COMPANY
+ID[*] INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE);
+"; SQL statement:
+CREATE TABLE
+IF NOT EXISTS COMPANY
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE);
+ [42000-200]
+2023-03-16 14:15:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE
+IF NOT EXISTS COMPANY
+ID[*] INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE);
+"; SQL statement:
+CREATE TABLE
+IF NOT EXISTS COMPANY
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE);
+ [42000-200]
+2023-03-17 21:30:56 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: This method is not allowed for a prepared statement; use a regular statement instead. [90130-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:322)
+	at carsharing.DAO.CompanyImpl.create(CompanyImpl.java:48)
+	at carsharing.Menu.logInAsManager(Menu.java:47)
+	at carsharing.Menu.logInAsManager(Menu.java:50)
+	at carsharing.Menu.displayMenu(Menu.java:28)
+	at carsharing.Main.main(Main.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-17 21:31:47 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:352)
+	at carsharing.DAO.CompanyImpl.getAll(CompanyImpl.java:31)
+	at carsharing.DAO.CompanyImpl.printCompanies(CompanyImpl.java:65)
+	at carsharing.Menu.logInAsManager(Menu.java:42)
+	at carsharing.Menu.logInAsManager(Menu.java:50)
+	at carsharing.Menu.logInAsManager(Menu.java:50)
+	at carsharing.Menu.displayMenu(Menu.java:28)
+	at carsharing.Main.main(Main.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-17 21:33:08 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "id" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:352)
+	at carsharing.DAO.CompanyImpl.getAll(CompanyImpl.java:31)
+	at carsharing.DAO.CompanyImpl.printCompanies(CompanyImpl.java:65)
+	at carsharing.Menu.logInAsManager(Menu.java:42)
+	at carsharing.Menu.logInAsManager(Menu.java:50)
+	at carsharing.Menu.logInAsManager(Menu.java:50)
+	at carsharing.Menu.displayMenu(Menu.java:28)
+	at carsharing.Main.main(Main.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-18 02:08:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),[*]
+COMPANY_ID INT NOT NULL,
+CONSTRAINT FK_COMPANY_ID FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),
+COMPANY_ID INT NOT NULL,
+CONSTRAINT fk_company_id FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+ [42000-200]
+2023-03-18 02:08:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),[*]
+COMPANY_ID INT NOT NULL,
+CONSTRAINT FK_COMPANY_ID FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),
+COMPANY_ID INT NOT NULL,
+CONSTRAINT fk_company_id FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+ [42000-200]
+2023-03-18 02:10:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),[*]
+COMPANY_ID INT NOT NULL,
+CONSTRAINT FK_COMPANY_ID FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),
+COMPANY_ID INT NOT NULL,
+CONSTRAINT fk_company_id FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+ [42000-200]
+2023-03-18 02:10:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),[*]
+COMPANY_ID INT NOT NULL,
+CONSTRAINT FK_COMPANY_ID FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),
+COMPANY_ID INT NOT NULL,
+CONSTRAINT fk_company_id FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+ [42000-200]
+2023-03-18 02:11:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),[*]
+COMPANY_ID INT NOT NULL,
+CONSTRAINT FK_COMPANY FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),
+COMPANY_ID INT NOT NULL,
+CONSTRAINT fk_company FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+ [42000-200]
+2023-03-18 02:11:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),[*]
+COMPANY_ID INT NOT NULL,
+CONSTRAINT FK_COMPANY FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),
+COMPANY_ID INT NOT NULL,
+CONSTRAINT fk_company FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+ [42000-200]
+2023-03-18 02:22:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),[*]
+COMPANY_ID INT NOT NULL,
+CONSTRAINT FK_COMPANY FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),
+COMPANY_ID INT NOT NULL,
+CONSTRAINT fk_company FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+ [42000-200]
+2023-03-18 02:22:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),[*]
+COMPANY_ID INT NOT NULL,
+CONSTRAINT FK_COMPANY FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(255) NOT NULL UNIQUE),
+COMPANY_ID INT NOT NULL,
+CONSTRAINT fk_company FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID)
+);
+ [42000-200]
+2023-03-18 03:16:20 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-18 03:24:17 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-18 03:26:59 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-18 17:01:34 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-200]
+2023-03-18 17:36:49 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-200]
+2023-03-18 17:36:49 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+UPDATE CUSTOMER
+SET RENTED_CAR_ID = NULL
+WHERE ID = (?)
+ [90002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.Prepared.query(Prepared.java:231)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:285)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:114)
+	at carsharing.DAO.CustomerImpl.returnCar(CustomerImpl.java:108)
+	at carsharing.Menu.returnRentedCar(Menu.java:154)
+	at carsharing.Menu.displayCustomerMenu(Menu.java:144)
+	at carsharing.Menu.displayCustomerMenu(Menu.java:147)
+	at carsharing.Menu.logInAsCustomer(Menu.java:88)
+	at carsharing.Menu.mainMenu(Menu.java:31)
+	at carsharing.Menu.mainMenu(Menu.java:34)
+	at carsharing.Menu.mainMenu(Menu.java:34)
+	at carsharing.Menu.mainMenu(Menu.java:34)
+	at carsharing.Main.main(Main.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-18 19:15:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+UPDATE CUSTOMER
+SET RENTED_CAR_ID = (?)
+WHERE ID = (?)
+ [90002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.Prepared.query(Prepared.java:231)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:285)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:114)
+	at carsharing.DAO.CustomerImpl.rentCar(CustomerImpl.java:132)
+	at carsharing.Menu.rentCar(Menu.java:179)
+	at carsharing.Menu.displayCustomerMenu(Menu.java:144)
+	at carsharing.Menu.logInAsCustomer(Menu.java:89)
+	at carsharing.Menu.mainMenu(Menu.java:32)
+	at carsharing.Main.main(Main.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-18 19:16:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-200]
+2023-03-18 19:16:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-200]
+2023-03-18 19:16:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-18 19:18:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-200]
+2023-03-18 19:18:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-200]
+2023-03-18 19:18:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-18 19:29:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+UPDATE CUSTOMER
+SET RENTED_CAR_ID = NULL
+WHERE ID = (?)
+ [90002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.Prepared.query(Prepared.java:231)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:285)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:114)
+	at carsharing.DAO.CustomerImpl.returnCar(CustomerImpl.java:113)
+	at carsharing.Menu.returnRentedCar(Menu.java:185)
+	at carsharing.Menu.displayCustomerMenu(Menu.java:145)
+	at carsharing.Menu.rentCar(Menu.java:158)
+	at carsharing.Menu.displayCustomerMenu(Menu.java:144)
+	at carsharing.Menu.displayCustomerMenu(Menu.java:148)
+	at carsharing.Menu.rentCar(Menu.java:181)
+	at carsharing.Menu.displayCustomerMenu(Menu.java:144)
+	at carsharing.Menu.logInAsCustomer(Menu.java:89)
+	at carsharing.Menu.mainMenu(Menu.java:32)
+	at carsharing.Main.main(Main.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
